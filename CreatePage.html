@@ -10,16 +10,21 @@
 		<script type="text/javascript" src="Movie.js"> </script>
 		<title>WikiMovie:  Add A Movie</title>
 	</head>
-	<body id=searchpage>
+	<body id=createpage>
 		<div class=top>
 			<h1 class=title>WikiMovie</h1>
 			<h2 class=subtitle>The Movie Database That Anyone Can Edit</h2>
 			<h3 class=sectionTitle>Please select the following attributes to add a new movie to the database.</h3>
 		</div>
-		<div id=createSection>
+		<div>
+			<form id=createSection name= create action="Movie.html">
+			<div class=movietitle>
+				<label>Title:</label>
+				<input id=titlesearchfield type=text name="t">
+			</div>	
 			<div class=GENRE>
 				<label>Genre:</label>
-				<select name=Genre>
+				<select id=genrecreatefield name=Genre>
 					<option class=genre value=c>Comedy</option>
 					<option class=genre value=h>Horror</option>
 					<option class=genre value=d>Drama</option>
@@ -36,7 +41,7 @@
 			</div>
 			<div class=decadebox>
 				<label>Decade:</label>
-				<select name=Decade>
+				<select id=decadecreatefield name=Decade>
 					<option class=decade value=10s>2010's</option>
 					<option class=decade value=00s>2000's</option>
 					<option class=decade value=90s>1990's</option>
@@ -46,16 +51,16 @@
 					<option class=decade value=50s>1950's</option>
 				</select>
 			</div>
-			<div class=rating>
+			<div id=ratingcreatefield>
 				<label> Rating:</label>
 				<input type=text name="rating">
 			</div>
-			<div class=link>
+			<div id=linkcreatefield>
 				<label> RottenTomatoes Or IMDB Link: </label>
 				<input type=text name="link">
 			
 			</div>
-			<div class=poster>
+			<div id=postercreatefield>
 				<label> Poster: </label>
 				<input type=file name="poster">
 			
@@ -63,7 +68,8 @@
 			<br>
 			<div class=create>
 				<input type=submit value="Add Movie">
-			</div>	
+			</div>
+			</form>	
 			<div class=return>
 				<form action="SearchPage.html" method="LINK">
 				<input type=submit value="Return to Search">

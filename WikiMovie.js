@@ -2,26 +2,38 @@
 $(document).ready(function(){
 	var mc=new MovieCollection();
 	mc.add(new Movie('Big Bad John', 'Tom Cruise', 'c', '90s', 'poster', 'link', '89'));
-	var tvalue=null;
-	var avalue=null;
-	$('#createSection').on('click', '.create', function(){
-		alert("YOU DID IT!!!");
-	});
+	var tsvalue=null;
+	var asvalue=null;
+	var tcvalue=null;
+	var acvalue=null;
+	var lcvalue=null;
+	var rcvalue=null;
 	$('#titlesearchfield').keyup(function(){
-		tvalue= $(this).val();
+		tsvalue= $(this).val();
 	});
 	$('#actorsearchfield').keyup(function(){
-		avalue= $(this).val();
+		asvalue= $(this).val();
+	});
+	$('#titlecreatefield').keyup(function(){
+		tcvalue= $(this).val();
+	});
+	$('#actorcreatefield').keyup(function(){
+		acvalue= $(this).val();
+	});
+	$('#linkcreatefield').keyup(function(){
+		lcvalue= $(this).val();
+	});
+	$('#ratingcreatefield').keyup(function(){
+		rcvalue= $(this).val();
 	});
 	$('#searchpage').on('click', '.search', function(e){
-		e.preventDefault();
-		var t= tvalue;
+		var t= tsvalue;
 		var g= $('#genresearchfield').val();
-		var a= avalue;
+		var a= asvalue;
 		var d= $('#decadesearchfield').val();
 		alert(t.trim());
 		alert(g);
-		alert(a);
+		alert(a.trim());
 		alert(d);
 		var r= mc.getMovie(t.trim(),g,a.trim(),d);
 		if (r === undefined){
@@ -37,4 +49,19 @@ $(document).ready(function(){
 			
 			
 		});
+	$('createpage').on('click','.create',function(e){
+		e.preventDefault();
+		var tc=tcvalue;
+		var gc= $('#genrecreatefield').val();
+		var ac=acvalue;
+		var dc= $('#decadecreatefield').val();
+		var lc=lcvalue;
+		var rc=rcvalue;
+		alert(tc);
+		alert(gc);
+		alert(ac);
+		alert(dc);
+		alert(lc);
+		alert(rc);
+	});
 	});

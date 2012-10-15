@@ -24,7 +24,7 @@ a:hover{
 	margin-left: 200px;
 	
 }
-#searchpage {
+#searchpage, #createpage {
 	border: thin solid black;
 	width: 600px;
 	margin-left: auto;

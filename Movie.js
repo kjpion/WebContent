@@ -13,7 +13,7 @@ var Movie=function(title, actor, genre, decade, poster, link, rating){
 	this.rating=rating;
 };
 
-Movie.prototype.printTitle=function(){
+/*Movie.prototype.printTitle=function(){
 	document.write(title);
 };
 Movie.prototype.printActor=function(){
@@ -30,4 +30,4 @@ Movie.prototype.printPoster=function(){
 };
 Movie.prototype.printRating=function(){
 	document.write(rating);
-};
+};*/
