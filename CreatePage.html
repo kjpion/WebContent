@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css"
+		href="WikiMovieStyleSheet.css">
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="http://www.cs.unc.edu/Courses/comp426-f12/jquery-1.8.1.js"> </script>
+		<script type="text/javascript" src="WikiMovie.js"> </script>
+		<script type="text/javascript" src="MovieCollection.js"> </script>
+		<script type="text/javascript" src="Movie.js"> </script>
+		<title>WikiMovie:  Add A Movie</title>
+	</head>
+	<body id=searchpage>
+		<div class=top>
+			<h1 class=title>WikiMovie</h1>
+			<h2 class=subtitle>The Movie Database That Anyone Can Edit</h2>
+			<h3 class=sectionTitle>Please select the following attributes to add a new movie to the database.</h3>
+		</div>
+		<div id=createSection>
+			<div class=GENRE>
+				<label>Genre:</label>
+				<select name=Genre>
+					<option class=genre value=c>Comedy</option>
+					<option class=genre value=h>Horror</option>
+					<option class=genre value=d>Drama</option>
+					<option class=genre value=a>Action</option>
+					<option class=genre value=f>Fantasy</option>
+					<option class=genre value=s>Science Fiction</option>
+					<option class=genre value=t>Thriller</option>
+					<option class=genre value=r>Romance</option>
+				</select>
+			</div>
+			<div class=actor>
+				<label>Main Actor: </label>
+				<input type=text name="Main Actor">
+			</div>
+			<div class=decadebox>
+				<label>Decade:</label>
+				<select name=Decade>
+					<option class=decade value=10s>2010's</option>
+					<option class=decade value=00s>2000's</option>
+					<option class=decade value=90s>1990's</option>
+					<option class=decade value=80s>1980's</option>
+					<option class=decade value=70s>1970's</option>
+					<option class=decade value=60s>1960's</option>
+					<option class=decade value=50s>1950's</option>
+				</select>
+			</div>
+			<div class=rating>
+				<label> Rating:</label>
+				<input type=text name="rating">
+			</div>
+			<div class=link>
+				<label> RottenTomatoes Or IMDB Link: </label>
+				<input type=text name="link">
+			
+			</div>
+			<div class=poster>
+				<label> Poster: </label>
+				<input type=file name="poster">
+			
+			</div>
+			<br>
+			<div class=create>
+				<input type=submit value="Add Movie">
+			</div>	
+			<div class=return>
+				<form action="SearchPage.html" method="LINK">
+				<input type=submit value="Return to Search">
+				</FORM>
+			</div>	
+	</body>
+</html>

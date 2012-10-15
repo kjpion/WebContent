@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css"
+		href="WikiMovieStyleSheet.css">
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="http://www.cs.unc.edu/Courses/comp426-f12/jquery-1.8.1.js"> </script>
+		<script type="text/javascript" src="WikiMovie.js"> </script>
+		<script type="text/javascript" src="MovieCollection.js"> </script>
+		<script type="text/javascript" src="Movie.js"> </script>
+		<title>WikiMovie</title>
+	</head>
+	<body id=searchpage>
+		<div class=top>
+			<h1 class=title>WikiMovie</h1>
+			<h2 class=subtitle>The Movie Database That Anyone Can Edit</h2>
+			<h3 class=sectionTitle>Find a Movie</h3>
+		</div>
+		<div>
+			<form id= searchSection name=search action="ResultsPage.html" method="get">
+			<div class=movietitle>
+				<label>Title:</label>
+				<input id=titlesearchfield type=text name="t">
+			</div>	 	
+			<div class=GENRE>
+				<label>Select a genre:</label>
+				<select id=genresearchfield name="g">
+					<option class=genre value=c>Comedy</option>
+					<option class=genre value=h>Horror</option>
+					<option class=genre value=d>Drama</option>
+					<option class=genre value=a>Action</option>
+					<option class=genre value=f>Fantasy</option>
+					<option class=genre value=s>Science Fiction</option>
+					<option class=genre value=t>Thriller</option>
+					<option class=genre value=r>Romance</option>
+				</select>
+			</div>
+			<div class=actor>
+				<label>Main Actor: </label>
+				<input id=actorsearchfield type=text name="a">
+			</div>
+			<div class=decadebox>
+				<label>Select a decade:</label>
+				<select id=decadesearchfield name="d">
+					<option class=decade value=10s>2010's</option>
+					<option class=decade value=00s>2000's</option>
+					<option class=decade value=90s>1990's</option>
+					<option class=decade value=80s>1980's</option>
+					<option class=decade value=70s>1970's</option>
+					<option class=decade value=60s>1960's</option>
+					<option class=decade value=50s>1950's</option>
+				</select>
+			</div>
+			<input type="submit" class=search value="Submit">
+			</div>
+		</form>
+			<div class=create>
+				<FORM METHOD="LINK" ACTION="CreatePage.html">
+				<input type=submit value="Add Movie">
+				</FORM>
+			</div>
+		</div>
+	</body>
+</html>
